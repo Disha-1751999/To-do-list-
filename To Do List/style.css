@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container{
+    background-image: linear-gradient(to left,#4bcffa 30%,#0fbcf9);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-app{
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    min-width: 560px;
+}
+.todo-app h2{
+    color:#002765 ;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.todo-app h2 img{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row{
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    
+
+}
+
+.row #input-box{
+    border: none;
+    outline:none;
+    padding: 15px ;
+    background-color: transparent;
+    margin-left: 20px;
+    flex:1;
+    font-size: 1rem;
+    user-select: none;
+    background: transparent;
+}
+.row #input-box:active{
+    background: transparent;
+}
+
+.row #add-button{
+    border: none;
+    outline: none;
+    background-color: #ff793f;
+    color: white;
+    padding: 15px 35px ;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+#list-container{
+    margin: 30px 0px;
+}
+
+#list-container li{
+    list-style-type: none;
+    margin-left: 30px;
+    font-size: 1rem;
+    user-select: none;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 10px;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    
+}
+
+#list-container li::before{
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-image:url(./images/unchecked.png) ;
+    background-size: cover;
+    left: -30px;
+    top: 0;
+    margin-right: 1rem ;
+    
+}
+#list-container  li.checked  .text{
+    text-decoration: line-through;
+    color: #555;
+}
+
+#list-container  li.checked::before{
+    background-image: url(./images/checked.png);
+ }
+
+ #list-container li #remove{
+    opacity: 0;
+ }
+ #list-container li:hover #remove{
+    opacity: 1;
+    cursor: pointer;
+ }  
+   
+
+
+
